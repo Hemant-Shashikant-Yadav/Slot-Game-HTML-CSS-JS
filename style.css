@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --icon_width: 79px;
+  --icon_height: 79px;
+  --num_of_icons: 9;
+}
+
+body {
+  background: linear-gradient(45deg, #4a90e2, #50e3c2);
+  font-family: Arial, sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.game-container {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.info {
+  margin-bottom: 20px;
+}
+
+.slots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.reel {
+  width: var(--icon_width);
+  height: calc(var(--icon_height) * 3);
+  border: 2px solid white;
+  border-radius: 10px;
+  background-image: url("reel.png");
+  background-repeat: repeat-y;
+  background-position: 0 0;
+  overflow: hidden;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#spin-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+#decrease-bet,
+#increase-bet {
+  background-color: #f39c12;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.8;
+}
